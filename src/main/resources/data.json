@@ -1,0 +1,30 @@
+{
+  "readedBooks" : [ {
+    "title" : "Przeczytana",
+    "author" : "Ktoś",
+    "releaseDate" : 1708560000000,
+    "pagesNumber" : 44,
+    "rate" : 6.0,
+    "review" : "Bardzo fajna choć słaby autro",
+    "readDate" : 1719792000000,
+    "readed" : true
+  }, {
+    "title" : "czytana",
+    "author" : "Ktoś",
+    "releaseDate" : 1708560000000,
+    "pagesNumber" : 44,
+    "rate" : 4.0,
+    "review" : "Super hiper fajna",
+    "readDate" : -23889690000000,
+    "readed" : true
+  } ],
+  "pendingBooks" : [ {
+    "title" : "do przeczytania",
+    "author" : "Ktoś",
+    "releaseDate" : 1708560000000,
+    "pagesNumber" : 44,
+    "readedStart" : 1690495200000,
+    "readed" : false
+  } ],
+  "awaitingBooks" : [ ]
+}
