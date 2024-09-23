@@ -26,7 +26,7 @@ public class ListRepository implements Database {
     private List<AwaitingBook> awaitingBooks = new ArrayList<>();
     private List<PendingBook> pendingBooks = new ArrayList<>();
     private List<ReadedBook> readedBooks = new ArrayList<>();
-    private final String filePath = "M:/Michal/Programowanie/Java/bookDiary/bookDiary/src/main/resources/data.json";
+    private final String filePath = getFilePath();
     private final ObjectMapper objectMapper = new ObjectMapper();
 
     public ListRepository() {
@@ -74,6 +74,11 @@ public class ListRepository implements Database {
             throw new RuntimeException(e);
         }
 
+    }
+
+    private String getFilePath(){
+        String filePath = System.getProperty("user.dir") +"/src/main/resources/data.json";
+        return filePath;
     }
 
     public void addNewBook(ReadedBook book) {
@@ -225,10 +230,16 @@ public class ListRepository implements Database {
     }
 
     private Date makeAsData(String dataString) {
+//        FIXME - PRzesynąć try-catch i zapętlić w razie błędu
         Date date1;
         try {
-            date1 = new SimpleDateFormat("dd/MM/yyyy").parse(dataString);
-
+            if (dataString.contains(".")) {
+                date1 = new SimpleDateFormat("dd.MM.yyyy").parse(dataString);
+            } else if (dataString.contains("-")) {
+                date1 = new SimpleDateFormat("dd-MM-yyyy").parse(dataString);
+            }else{
+                date1 = new SimpleDateFormat("dd/MM/yyyy").parse(dataString);
+            }
         } catch (ParseException e) {
             throw new RuntimeException(e + " Zły format danych. Wpisz dane w formacie dd/MM/yyyy");
 

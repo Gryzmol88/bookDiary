@@ -14,30 +14,35 @@ public class Core {
     public void mainRun(){
         boolean run = true;
         while (run){
-
-            switch(tg.showStartProgram()){
-                case "1":
-                    tg.showAddNewBookMenu();
-                    break;
-                case "2":
-                    tg.showDeleteBook();
-                    break;
-                case "3":
-                    tg.showAllBooks();
-                    break;
-                case "4":
-                    tg.showMovedPendingToReaded();
-                    break;
-                case "5":
-                    tg.showMovedAwaitngToPending();
-                    break;
-                case "0":
-                    run = false;
-                    break;
-                default:
-                    tg.wrongChoose();
-                    break;
+            try{
+                switch(tg.showStartProgram()){
+                    case "1":
+                        tg.showAddNewBookMenu();
+                        break;
+                    case "2":
+                        tg.showDeleteBook();
+                        break;
+                    case "3":
+                        tg.showAllBooks();
+                        break;
+                    case "4":
+                        tg.showMovedPendingToReaded();
+                        break;
+                    case "5":
+                        tg.showMovedAwaitngToPending();
+                        break;
+                    case "0":
+                        run = false;
+                        break;
+                    default:
+                        tg.wrongChoose();
+                        break;
+                }
+            }catch (Exception e){
+                System.out.println(e.getMessage());
+                break;
             }
+
         }
     }
 

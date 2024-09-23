@@ -132,22 +132,24 @@ public class TerminalGui implements Gui {
     }
 
     private void showAddReadedBook() {
-        System.out.println("Podaj tytuł.");
-        String title = scanner.nextLine();
-        System.out.println("Podaj autora.");
-        String author = scanner.nextLine();
-        System.out.println("Podaj date wydania (w formacie dd/MM/yyyy)");
-        String dateRelase = scanner.nextLine();
-        System.out.println("Podaj liczbe stron.");
-        String pageNumber = scanner.nextLine();
-        System.out.println("Podaj ocene (1-6).");
-        String rate = scanner.nextLine();
-        System.out.println("Dodaj krótki opis.");
-        String review = scanner.nextLine();
-        System.out.println("Podaj datę przeczytania.(w formacie dd/MM/yyyy)");
-        String readDate = scanner.nextLine();
-        db.getBookReadedData(title, author, dateRelase, pageNumber, rate, review, readDate);
-        showComment("Dodano książke");
+            System.out.println("Podaj tytuł.");
+            String title = scanner.nextLine();
+            System.out.println("Podaj autora.");
+            String author = scanner.nextLine();
+            System.out.println("Podaj date wydania (w formacie dd/MM/yyyy)");
+            String dateRelase = scanner.nextLine();
+            System.out.println("Podaj liczbe stron.");
+            String pageNumber = scanner.nextLine();
+            System.out.println("Podaj ocene (1-6).");
+            String rate = scanner.nextLine();
+            System.out.println("Dodaj krótki opis.");
+            String review = scanner.nextLine();
+            System.out.println("Podaj datę przeczytania.(w formacie dd/MM/yyyy)");
+            String readDate = scanner.nextLine();
+            db.getBookReadedData(title, author, dateRelase, pageNumber, rate, review, readDate);
+            showComment("Dodano książke");
+
+
     }
 
     private void showAddAwaitingBook() {
