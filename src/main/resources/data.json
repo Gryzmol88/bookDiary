@@ -53,5 +53,11 @@
     "readedStart" : 1690495200000,
     "readed" : false
   } ],
-  "awaitingBooks" : [ ]
+  "awaitingBooks" : [ {
+    "title" : "Liliana śpiewwa",
+    "author" : "Michał",
+    "releaseDate" : -61758810000000,
+    "pagesNumber" : 321,
+    "readed" : false
+  } ]
 }

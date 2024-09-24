@@ -14,7 +14,6 @@ public class App {
     }
 }
 /*TODO
-   - ładna metoda to String
    - sprawdzić czy dodawane książki w trakcie działania programu zabisują się do db
    - przesuwanie książek musi sprawdzać czy dana książka juz nie jistnieje w zbiorze (sprawdzenie jest tylko w metodzie addNewBook
    - sprawdzenie czy podane sa liczby

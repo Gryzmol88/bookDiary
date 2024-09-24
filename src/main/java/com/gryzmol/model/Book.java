@@ -1,6 +1,10 @@
 package com.gryzmol.model;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.time.format.DateTimeFormatter;
 import java.util.Date;
+
 
 public class Book {
     private String title;
@@ -79,9 +83,10 @@ public class Book {
 //    }
 @Override
     public String toString() {
+    DateFormat dtf = new SimpleDateFormat("yyyy-MM-dd");
         return "Tytuł: '" + title + '\'' +
                 ", Autor: '" + author + '\'' +
-                ", Data wydania: " + releaseDate +
+                ", Data wydania: " + dtf.format(releaseDate) + '\'' +
                 ", Liczba stron: " + pagesNumber
                 ;
     }

@@ -1,5 +1,7 @@
 package com.gryzmol.model;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class PendingBook extends Book {
@@ -22,8 +24,9 @@ private Date readedStart;
     }
     @Override
     public String toString() {
+        DateFormat dtf = new SimpleDateFormat("yyyy-MM-dd");
         return super.toString()+
-                "Data rozpoczęcia czytania: '" + readedStart + '\''
+                ", Data rozpoczęcia czytania: '" + dtf.format(readedStart)  + '\''
                 ;
     }
 }

@@ -1,5 +1,7 @@
 package com.gryzmol.model;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class ReadedBook extends Book {
@@ -43,11 +45,12 @@ public class ReadedBook extends Book {
 
     @Override
     public String toString() {
+        DateFormat dtf = new SimpleDateFormat("yyyy-MM-dd");
         return super.toString()+
-                "Ocena: '" + rate + '\'' +
-                ", Recenzja: '" + rate + '\'' +
-                ", Data przeczytania: " + readDate+
-                review
+                ", Ocena: '" + rate + '\'' +
+                ", Recenzja: '" + review + '\'' +
+                ", Data przeczytania: " + dtf.format(readDate) +'\''
+
                 ;
     }
 
