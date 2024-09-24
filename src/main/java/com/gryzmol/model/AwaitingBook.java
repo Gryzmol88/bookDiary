@@ -9,6 +9,12 @@ public class AwaitingBook extends Book {
     public AwaitingBook(String title, String author, Date releaseDate, int pagesNumber) {
         super(title, author, releaseDate, pagesNumber);
         setReaded(false);
+
     }
+    @Override
+    public String toString() {
+        return super.toString();
+    }
+
 
 }
