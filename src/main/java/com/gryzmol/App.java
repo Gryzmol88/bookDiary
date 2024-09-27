@@ -9,8 +9,6 @@ public class App {
         Core app = new Core();
         app.mainRun();
 
-
-
     }
 }
 /*TODO
